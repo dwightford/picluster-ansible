@@ -7,3 +7,4 @@
       become: yes
       apt:
         update_cache=yes
+        upgrade:full
