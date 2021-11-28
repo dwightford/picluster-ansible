@@ -1,0 +1,766 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "interval": "",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rpi_cpu_temperature_celsius",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Raspberry Pi Temperatures",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "clusterName": "na0",
+      "colorMode": "Panel",
+      "colors": {
+        "crit": "rgba(245, 54, 54, 0.9)",
+        "disable": "rgba(128, 128, 128, 0.9)",
+        "ok": "rgba(50, 128, 45, 0.9)",
+        "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "cornerRadius": 0,
+      "datasource": null,
+      "displayName": "na0",
+      "flipCard": false,
+      "flipTime": 5,
+      "fontFormat": "Regular",
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 0,
+        "y": 10
+      },
+      "id": 16,
+      "isAutoScrollOnOverflow": false,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "options": {},
+      "targets": [
+        {
+          "aggregation": "Last",
+          "alias": "eth0",
+          "crit": 100,
+          "decimals": 0,
+          "disabledValue": "0",
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "expr": "node_network_up{device=\"eth0\", job=\"na0\"} OR on() vector(100)",
+          "legendFormat": "eth0",
+          "refId": "A",
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "warn": 50
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na0 eth0 status",
+      "type": "vonage-status-panel"
+    },
+    {
+      "clusterName": "na1",
+      "colorMode": "Panel",
+      "colors": {
+        "crit": "rgba(245, 54, 54, 0.9)",
+        "disable": "rgba(128, 128, 128, 0.9)",
+        "ok": "rgba(50, 128, 45, 0.9)",
+        "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "cornerRadius": 0,
+      "datasource": null,
+      "displayName": "na1",
+      "flipCard": false,
+      "flipTime": 5,
+      "fontFormat": "Regular",
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 4,
+        "y": 10
+      },
+      "id": 8,
+      "isAutoScrollOnOverflow": false,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "options": {},
+      "targets": [
+        {
+          "aggregation": "Last",
+          "alias": "eth0",
+          "crit": 100,
+          "decimals": 0,
+          "disabledValue": "0",
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "expr": "node_network_up{device=\"eth0\", job=\"na1\"} OR on() vector(100)",
+          "legendFormat": "eth0",
+          "refId": "A",
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "warn": 50
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na1 eth0 status",
+      "type": "vonage-status-panel"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 8,
+        "y": 10
+      },
+      "id": 12,
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "decimals": 0,
+            "links": [],
+            "mappings": [],
+            "max": 100,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "% RAM Used"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "(((node_memory_MemTotal_bytes{job=\"na0\"} - node_memory_MemFree_bytes{job=\"na0\"} - node_memory_Buffers_bytes{job=\"na0\"} - node_memory_Cached_bytes{job=\"na0\"}) / node_memory_MemTotal_bytes{job=\"na0\"}) * 100)",
+          "legendFormat": "{{hostname}}",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na0 RAM Usage",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 12,
+        "y": 10
+      },
+      "id": 13,
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "decimals": 0,
+            "links": [],
+            "mappings": [],
+            "max": 100,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "% RAM Used"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "(((node_memory_MemTotal_bytes{job=\"na1\"} - node_memory_MemFree_bytes{job=\"na1\"} - node_memory_Buffers_bytes{job=\"na1\"} - node_memory_Cached_bytes{job=\"na1\"}) / node_memory_MemTotal_bytes{job=\"na1\"}) * 100)",
+          "legendFormat": "{{hostname}}",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na1 RAM Usage",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 16,
+        "y": 10
+      },
+      "id": 20,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "na0 CPU",
+            "unit": "percent"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "vertical"
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"na0\", mode=\"idle\"}[5m])) * 100)",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na0 CPU",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 20,
+        "y": 10
+      },
+      "id": 21,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "na1 CPU",
+            "unit": "percent"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "vertical"
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"na1\", mode=\"idle\"}[5m])) * 100)",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na1 CPU",
+      "type": "stat"
+    },
+    {
+      "clusterName": "na2",
+      "colorMode": "Panel",
+      "colors": {
+        "crit": "rgba(245, 54, 54, 0.9)",
+        "disable": "rgba(128, 128, 128, 0.9)",
+        "ok": "rgba(50, 128, 45, 0.9)",
+        "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "cornerRadius": 0,
+      "datasource": null,
+      "displayName": "na2",
+      "flipCard": false,
+      "flipTime": 5,
+      "fontFormat": "Regular",
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 0,
+        "y": 16
+      },
+      "id": 18,
+      "isAutoScrollOnOverflow": false,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "options": {},
+      "targets": [
+        {
+          "aggregation": "Last",
+          "alias": "eth0",
+          "crit": 100,
+          "decimals": 0,
+          "disabledValue": "0",
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "expr": "node_network_up{device=\"eth0\", job=\"na2\"} OR on() vector(100)",
+          "legendFormat": "eth0",
+          "refId": "A",
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "warn": 50
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na2 eth0 status",
+      "type": "vonage-status-panel"
+    },
+    {
+      "clusterName": "na3",
+      "colorMode": "Panel",
+      "colors": {
+        "crit": "rgba(245, 54, 54, 0.9)",
+        "disable": "rgba(128, 128, 128, 0.9)",
+        "ok": "rgba(50, 128, 45, 0.9)",
+        "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "cornerRadius": 0,
+      "datasource": null,
+      "displayName": "na3",
+      "flipCard": false,
+      "flipTime": 5,
+      "fontFormat": "Regular",
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 4,
+        "y": 16
+      },
+      "id": 17,
+      "isAutoScrollOnOverflow": false,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "options": {},
+      "targets": [
+        {
+          "aggregation": "Last",
+          "alias": "eth0",
+          "crit": 100,
+          "decimals": 0,
+          "disabledValue": "0",
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "expr": "node_network_up{device=\"eth0\", job=\"na3\"} OR on() vector(100)",
+          "legendFormat": "eth0",
+          "refId": "A",
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "warn": 50
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na3 eth0 status",
+      "type": "vonage-status-panel"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 8,
+        "y": 16
+      },
+      "id": 14,
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "decimals": 0,
+            "links": [],
+            "mappings": [],
+            "max": 100,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "% RAM Used"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "(((node_memory_MemTotal_bytes{job=\"na2\"} - node_memory_MemFree_bytes{job=\"na2\"} - node_memory_Buffers_bytes{job=\"na2\"} - node_memory_Cached_bytes{job=\"na2\"}) / node_memory_MemTotal_bytes{job=\"na2\"}) * 100)",
+          "legendFormat": "{{hostname}}",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na2 RAM Usage",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 12,
+        "y": 16
+      },
+      "id": 15,
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "decimals": 0,
+            "links": [],
+            "mappings": [],
+            "max": 100,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "% RAM Used"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "(((node_memory_MemTotal_bytes{job=\"na3\"} - node_memory_MemFree_bytes{job=\"na3\"} - node_memory_Buffers_bytes{job=\"na3\"} - node_memory_Cached_bytes{job=\"na3\"}) / node_memory_MemTotal_bytes{job=\"na3\"}) * 100)",
+          "legendFormat": "{{hostname}}",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na3 RAM Usage",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 16,
+        "y": 16
+      },
+      "id": 22,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "na2 CPU",
+            "unit": "percent"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "vertical"
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"na2\", mode=\"idle\"}[5m])) * 100)",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na2 CPU",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 20,
+        "y": 16
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "title": "na3 CPU",
+            "unit": "percent"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "vertical"
+      },
+      "pluginVersion": "6.6.1",
+      "targets": [
+        {
+          "expr": "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"na3\", mode=\"idle\"}[5m])) * 100)",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "na3 CPU",
+      "type": "stat"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "PiCluster",
+  "uid": "jjEdAvzgk",
+  "version": 22
+}
