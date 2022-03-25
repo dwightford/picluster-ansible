@@ -1,10 +1,11 @@
 ---
 - name: Playbook for managing the updates in RPi
-  hosts: all 
+  hosts: raspberry_pi
   user: pi
+  gather_facts: no
   tasks:
-    - name: 'Update apt package cache'
-      become: yes
+    - name: Update apt package cache
+      become: true
       apt:
-        update_cache=yes
-        upgrade:full
+        update_cache: yes
+        upgrade: full

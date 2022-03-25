@@ -1,0 +1,50 @@
+---
+all:
+  hosts:
+    nd0:
+      ansible_host: nd0.local
+    nd1:
+      ansible_host: nd1.local
+    nd2:
+      ansible_host: nd2.local
+    nd3:
+      ansible_host: nd3.local
+    nd4:
+      ansible_host: nd4.local
+    nd5:
+      ansible_host: nd5.local
+
+
+
+  children:
+    raspberry_pi:
+      hosts:
+        nd0: {}
+        nd1: {}
+        nd2: {}
+        nd3: {}
+        nd4: {}
+        nd5: {}
+
+
+
+
+    k3s_coordindtor:
+      hosts:
+        nd0: {}
+    k3s_worker:
+      hosts:
+        nd1: {}
+        nd2: {}
+        nd3: {}
+        nd4: {}
+        nd5: {}
+
+
+
+    monitoring_server:
+      hosts:
+        nd0: {}
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    remote_user: pi

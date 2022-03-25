@@ -1,4 +1,0 @@
-ff592998171fa562fd053b4169f36e453a04bcf3d6608466e73eec1def1feb54  rpi_exporter-0.6.0.linux-arm64.tar.gz
-b82aa3256040d2e2a65893495fa6b7768d9b0b86c0b55b053f2da6304ed70694  rpi_exporter-0.6.0.linux-armv5.tar.gz
-ec55afe1c8ba6615a799f155cccbeabe4a7c5d7aebf977742c8b176fd383bba1  rpi_exporter-0.6.0.linux-armv6.tar.gz
-31970b944b63288900471db547f16035902c2a374d5d977af82522a18ca081dc  rpi_exporter-0.6.0.linux-armv7.tar.gz

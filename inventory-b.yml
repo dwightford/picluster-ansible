@@ -1,0 +1,50 @@
+---
+all:
+  hosts:
+    nb0:
+      ansible_host: nb0.local
+    nb1:
+      ansible_host: nb1.local
+    nb2:
+      ansible_host: nb2.local
+    nb3:
+      ansible_host: nb3.local
+    nb4:
+      ansible_host: nb4.local
+    nb5:
+      ansible_host: nb5.local
+
+
+
+  children:
+    raspberry_pi:
+      hosts:
+        nb0: {}
+        nb1: {}
+        nb2: {}
+        nb3: {}
+        nb4: {}
+        nb5: {}
+
+
+
+
+    k3s_coordinbtor:
+      hosts:
+        nb0: {}
+    k3s_worker:
+      hosts:
+        nb1: {}
+        nb2: {}
+        nb3: {}
+        nb4: {}
+        nb5: {}
+
+
+
+    monitoring_server:
+      hosts:
+        nb0: {}
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    remote_user: pi
